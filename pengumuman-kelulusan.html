@@ -41,19 +41,19 @@
             <div class="data my-4 mx-8">
               <div class="data-group flex">
                 <div class="data-label w-2/6">Nama</div>
-                <div class="data-value">: <span class="font-bold">AISAH</span></div>
+                <div class="data-value">: <span class="font-bold nama"></span></div>
               </div>
               <div class="data-group flex">
                 <div class="data-label w-2/6">Tempat, tanggal lahir</div>
-                <div class="data-value">: Karawang, 12 Desember 2004</div>
+                <div class="data-value">: <span class="tempat_lahir"></span>, <span class="tanggal_lahir"></span></div>
               </div>
               <div class="data-group flex">
                 <div class="data-label w-2/6">NIS / NISN</div>
-                <div class="data-value">: 192010002 / 0042934582</div>
+                <div class="data-value">: <span class="nis"></span> / <span class="nisn"></span></div>
               </div>
               <div class="data-group flex">
                 <div class="data-label w-2/6">Peminatan</div>
-                <div class="data-value">: IPA</div>
+                <div class="data-value">: <span class="jurusan"></span></div>
               </div>
               <div class="data-group flex">
                 <div class="data-label w-2/6">Dinyatakan</div>
@@ -79,6 +79,58 @@
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.js"></script>
     <script>
+      const bulan = {
+        "01": "Januari",
+        "02": "Februari",
+        "03": "Maret",
+        "04": "April",
+        "05": "Mei",
+        "06": "Juni",
+        "07": "Juli",
+        "08": "Agustus",
+        "09": "September",
+        10: "Oktober",
+        11: "November",
+        12: "Desember",
+      };
+      // Fetch data kelulusan
+      const api_url = "https://alumni.sman1rawamerta.sch.id/api/kelulusan/0050892213";
+      fetch(api_url, {
+        method: "GET",
+        headers: {
+          "Content-Type": "application/json",
+        },
+      })
+        .then(function (response) {
+          if (response.status === 200) {
+            response.json().then(function (data) {
+              document.querySelector(".nama").innerHTML = data.biodata.nama;
+              document.querySelector(".tempat_lahir").innerHTML = data.biodata.tempat_lahir;
+
+              // Convert Tanggal lahir
+              let hari = String(data.biodata.tanggal_lahir).substr(8, 2);
+              let bulanLahir = String(data.biodata.tanggal_lahir).substr(5, 2);
+              let keys = Object.keys(bulan);
+              for (let i = 0; i < keys.length; i++) {
+                if (bulanLahir === keys[i]) {
+                  bulanLahir = bulan[keys[i]];
+                }
+              }
+              let tahun = String(data.biodata.tanggal_lahir).substr(0, 4);
+              document.querySelector(".tanggal_lahir").innerHTML = hari + " " + bulanLahir + " " + tahun;
+              document.querySelector(".nis").innerHTML = data.biodata.nis;
+              document.querySelector(".nisn").innerHTML = data.biodata.nisn;
+              document.querySelector(".jurusan").innerHTML = data.biodata.kelas.substr(3, 3).toUpperCase();
+            });
+          } else {
+            alert("Data tidak ditemukan");
+          }
+        })
+        .catch(function (error) {
+          console.log("Error: " + error);
+        });
+
+      // Download PDF
       document.querySelector(".download-pdf").addEventListener("click", () => {
         const element = document.getElementById("kelulusan");
         const option = {
