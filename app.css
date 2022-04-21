@@ -548,6 +548,14 @@ Ensure the default browser behavior of the `hidden` attribute.
   top: 0.5rem;
 }
 
+.top-\[25rem\]{
+  top: 25rem;
+}
+
+.left-\[10rem\]{
+  left: 10rem;
+}
+
 .z-50{
   z-index: 50;
 }
@@ -595,6 +603,11 @@ Ensure the default browser behavior of the `hidden` attribute.
   margin-right: 1.25rem;
 }
 
+.mx-2{
+  margin-left: 0.5rem;
+  margin-right: 0.5rem;
+}
+
 .ml-4{
   margin-left: 1rem;
 }
@@ -611,12 +624,20 @@ Ensure the default browser behavior of the `hidden` attribute.
   margin-top: 0.5rem;
 }
 
+.mb-2{
+  margin-bottom: 0.5rem;
+}
+
 .flex{
   display: flex;
 }
 
 .table{
   display: table;
+}
+
+.h-\[4cm\]{
+  height: 4cm;
 }
 
 .w-full{
@@ -663,6 +684,26 @@ Ensure the default browser behavior of the `hidden` attribute.
   width: 91.666667%;
 }
 
+.w-\[3cm\]{
+  width: 3cm;
+}
+
+.w-1\/2{
+  width: 50%;
+}
+
+.w-1\/6{
+  width: 16.666667%;
+}
+
+.w-2\/5{
+  width: 40%;
+}
+
+.w-4\/12{
+  width: 33.333333%;
+}
+
 .list-decimal{
   list-style-type: decimal;
 }
@@ -685,6 +726,10 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .justify-center{
   justify-content: center;
+}
+
+.justify-between{
+  justify-content: space-between;
 }
 
 .justify-evenly{
@@ -726,6 +771,11 @@ Ensure the default browser behavior of the `hidden` attribute.
 .bg-white{
   --tw-bg-opacity: 1;
   background-color: rgb(255 255 255 / var(--tw-bg-opacity));
+}
+
+.bg-gray-600{
+  --tw-bg-opacity: 1;
+  background-color: rgb(75 85 99 / var(--tw-bg-opacity));
 }
 
 .p-8{
@@ -775,6 +825,10 @@ Ensure the default browser behavior of the `hidden` attribute.
   text-align: center;
 }
 
+.text-justify{
+  text-align: justify;
+}
+
 .text-xl{
   font-size: 1.25rem;
   line-height: 1.75rem;
@@ -805,6 +859,10 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .font-normal{
   font-weight: 400;
+}
+
+.italic{
+  font-style: italic;
 }
 
 .leading-\[14px\]{
