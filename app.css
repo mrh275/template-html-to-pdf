@@ -475,7 +475,7 @@ Ensure the default browser behavior of the `hidden` attribute.
   border-bottom-width: 1px;
   --tw-border-opacity: 1;
   border-color: rgb(0 0 0 / var(--tw-border-opacity));
-  font-size: 14px;
+  font-size: 13px;
 }
 
 .table-nilai tr{
@@ -540,20 +540,40 @@ Ensure the default browser behavior of the `hidden` attribute.
   left: -1rem;
 }
 
-.top-3{
-  top: 0.75rem;
-}
-
-.top-2{
-  top: 0.5rem;
+.left-\[10rem\]{
+  left: 10rem;
 }
 
 .top-\[25rem\]{
   top: 25rem;
 }
 
-.left-\[10rem\]{
-  left: 10rem;
+.top-2{
+  top: 0.5rem;
+}
+
+.-left-5{
+  left: -1.25rem;
+}
+
+.-left-6{
+  left: -1.5rem;
+}
+
+.top-3{
+  top: 0.75rem;
+}
+
+.top-0{
+  top: 0px;
+}
+
+.-left-10{
+  left: -2.5rem;
+}
+
+.-top-3{
+  top: -0.75rem;
 }
 
 .z-50{
@@ -571,6 +591,11 @@ Ensure the default browser behavior of the `hidden` attribute.
 .mx-auto{
   margin-left: auto;
   margin-right: auto;
+}
+
+.mx-2{
+  margin-left: 0.5rem;
+  margin-right: 0.5rem;
 }
 
 .my-8{
@@ -603,11 +628,6 @@ Ensure the default browser behavior of the `hidden` attribute.
   margin-right: 1.25rem;
 }
 
-.mx-2{
-  margin-left: 0.5rem;
-  margin-right: 0.5rem;
-}
-
 .ml-4{
   margin-left: 1rem;
 }
@@ -620,12 +640,12 @@ Ensure the default browser behavior of the `hidden` attribute.
   margin-bottom: 5rem;
 }
 
-.mt-2{
-  margin-top: 0.5rem;
-}
-
 .mb-2{
   margin-bottom: 0.5rem;
+}
+
+.mb-\[70px\]{
+  margin-bottom: 70px;
 }
 
 .flex{
@@ -668,6 +688,18 @@ Ensure the default browser behavior of the `hidden` attribute.
   width: 3.5cm;
 }
 
+.w-1\/2{
+  width: 50%;
+}
+
+.w-\[3cm\]{
+  width: 3cm;
+}
+
+.w-11\/12{
+  width: 91.666667%;
+}
+
 .w-5\/12{
   width: 41.666667%;
 }
@@ -676,32 +708,16 @@ Ensure the default browser behavior of the `hidden` attribute.
   width: 120px;
 }
 
-.w-10\/12{
-  width: 83.333333%;
+.w-\[5cm\]{
+  width: 5cm;
 }
 
-.w-11\/12{
-  width: 91.666667%;
+.w-\[4cm\]{
+  width: 4cm;
 }
 
-.w-\[3cm\]{
-  width: 3cm;
-}
-
-.w-1\/2{
-  width: 50%;
-}
-
-.w-1\/6{
-  width: 16.666667%;
-}
-
-.w-2\/5{
-  width: 40%;
-}
-
-.w-4\/12{
-  width: 33.333333%;
+.w-\[90px\]{
+  width: 90px;
 }
 
 .list-decimal{
@@ -773,11 +789,6 @@ Ensure the default browser behavior of the `hidden` attribute.
   background-color: rgb(255 255 255 / var(--tw-bg-opacity));
 }
 
-.bg-gray-600{
-  --tw-bg-opacity: 1;
-  background-color: rgb(75 85 99 / var(--tw-bg-opacity));
-}
-
 .p-8{
   padding: 2rem;
 }
@@ -802,19 +813,14 @@ Ensure the default browser behavior of the `hidden` attribute.
   padding-right: 1rem;
 }
 
-.px-6{
-  padding-left: 1.5rem;
-  padding-right: 1.5rem;
-}
-
 .py-6{
   padding-top: 1.5rem;
   padding-bottom: 1.5rem;
 }
 
-.px-2{
-  padding-left: 0.5rem;
-  padding-right: 0.5rem;
+.px-6{
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
 }
 
 .pt-2{
@@ -849,6 +855,10 @@ Ensure the default browser behavior of the `hidden` attribute.
   line-height: 1.75rem;
 }
 
+.text-\[12px\]{
+  font-size: 12px;
+}
+
 .text-\[14px\]{
   font-size: 14px;
 }
@@ -865,16 +875,16 @@ Ensure the default browser behavior of the `hidden` attribute.
   font-style: italic;
 }
 
-.leading-\[14px\]{
-  line-height: 14px;
-}
-
 .leading-5{
   line-height: 1.25rem;
 }
 
-.leading-6{
-  line-height: 1.5rem;
+.leading-\[12px\]{
+  line-height: 12px;
+}
+
+.leading-\[16px\]{
+  line-height: 16px;
 }
 
 .text-white{

@@ -6,7 +6,7 @@
 
 @layer components {
   .table-nilai {
-    @apply w-full border-b border-black text-[14px];
+    @apply w-full border-b border-black text-[13px];
   }
 
   .table-nilai tr {

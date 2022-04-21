@@ -74,7 +74,7 @@
                 <p>Rawamerta, 05 Mei 2022</p>
                 <p class="mb-20">Kepala Sekolah,</p>
                 <img src="./img/ttd.png" alt="ttd" class="w-[1.5cm] absolute left-8 top-8" />
-                <img src="./img/stempel.png" alt="stempel" class="w-[3.5cm] absolute -left-4 top-4" />
+                <img src="./img/stempel.png" alt="stempel" class="w-[5cm] absolute -left-10 top-0" />
                 <p class="font-bold border-b-2 border-gray-800">EPUL SAEPUL, S.Pd.I., M.Pd.</p>
                 <p>NIP. 19820213 201001 1 003</p>
               </div>
@@ -91,7 +91,7 @@
         const option = {
           filename: "surat-keterangan-kelakuan-baik.pdf",
           image: { type: "jpeg", quality: 0.98 },
-          html2canvas: { scale: 2 },
+          html2canvas: { scale: 3 },
           jsPDF: { unit: "in", format: "A4", orientation: "portrait" },
         };
         html2pdf().set(option).from(element).save();
