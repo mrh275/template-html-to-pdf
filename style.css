@@ -1,0 +1,32 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .table-nilai {
+    @apply w-full border-b border-black text-[14px];
+  }
+
+  .table-nilai tr {
+    @apply border-l border-t border-black border-collapse;
+  }
+
+  .table-nilai td {
+    @apply border-r border-black border-collapse;
+  }
+
+  .table-nilai .number-list,
+  .table-nilai .nilai {
+    @apply text-center;
+  }
+
+  .table-nilai .kelompok-mapel {
+    @apply font-bold px-1;
+  }
+
+  .table-nilai .mapel {
+    @apply px-1;
+  }
+}
